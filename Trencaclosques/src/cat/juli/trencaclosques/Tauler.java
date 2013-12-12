@@ -25,11 +25,12 @@ public class Tauler {
 	
 	public void pintar(Pantalla principal){
 		for(Casella c: caselles){
-			System.out.println("Imatge!");
+		System.out.println("Imatge!");
 			principal.add(c.getImatge());
 			principal.pause(500);
 			
-		}
+	}
+		
 	}
 	
 	public ArrayList<Casella> getCaselles(){
@@ -43,7 +44,7 @@ public class Tauler {
 			for (int y = 0; y < vertical; y++) {
 				System.out.println("Estic tallant!");
 				GImage img = tallaImatge(imatgeOriginal, w*x, h*y, w, h);
-				Casella cas = new Casella(imatgeOriginal);
+				Casella cas = new Casella(img);
 				caselles.add(cas);
 
 			}
