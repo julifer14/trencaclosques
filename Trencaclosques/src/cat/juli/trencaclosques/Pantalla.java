@@ -24,17 +24,22 @@ public class Pantalla extends GraphicsProgram {
 		// es dispara
 		// la funció keyPressed
 		//addKeyListeners(this);
+		
 	}
 	public void run() {
-		Tauler tauler = new Tauler("wheezy.jpg", HORITZONTAL, VERTICAL);
+		Tauler tauler = new Tauler("pingu2.jpg", HORITZONTAL, VERTICAL);
+		GImage original = tauler.getImatge();
+		add(original);
+		pause(1000);
+		remove(original);
 		tauler.generarImatges();
 		tauler.pintar(this);
+		tauler.ultimaPeca(false);
 		
 		
 		
 		/*
-		GImage original = tauler.getImatge();
-		//add(original);
+		
 		tauler.generarImatges();
 		
 		ArrayList<Casella> caselles = tauler.getCaselles();
